@@ -43,6 +43,35 @@ Le but est de construire un modèle de Machine Learning capable de :
 1. Téléchargez le dataset à l'adresse suivante : https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 2. Placez le fichier "creditcard.csv" dans le répertoire "data/raw/".
 
+---
+
+# Guide Technique - MathAI Fraud Detection API
+
+## 1. Lancement de l'application
+Exécuter la commande suivante dans le terminal pour construire l'image et lancer le conteneur Docker :
+docker-compose up --build
+
+## 2. Accès à l'interface de test (Lien à mettre dans le navigateur)
+Ouvrir votre navigateur internet (Chrome, Firefox, Edge, etc.) et copier-coller l'adresse URL suivante dans la barre de recherche :
+http://localhost:8000/docs
+
+## 3. Utilisation de l'interface et soumission du test
+Dérouler la route POST /predict en cliquant dessus.
+Cliquer sur le bouton Try it out.
+Remplacer le contenu de la case Request body par le vecteur (le tableau de données) de 30 variables ci-dessous.
+Cliquer sur le bouton bleu Execute pour obtenir le résultat de la prédiction.
+
+## 4. Exemple de vecteur (30 variables) à saisir
+{
+  "features": [
+    0.0, -0.425966, 0.960523, 1.141822, -0.168252, 0.420987, -0.029728, 
+    0.473012, 0.139421, -0.210533, -0.452110, 0.682341, -0.125430, 
+    -0.852104, 0.215390, 0.914210, -0.312054, -0.115432, 0.085421, 
+    -0.089431, 0.051243, -0.241053, -0.612054, -0.052140, -0.352104, 
+    -0.112043, 0.412053, 0.152104, 0.042105, 45.99
+  ]
+}
+
 ## Structure du projet
 
 ```text
